@@ -1,5 +1,4 @@
-<h1>WELCOME TO THE STOCK FINDER APP</h1>
-
+<h1>My Portfolio</h1>
 <%= link_to "logout", destroy_user_session_path, method: :delete %>
 
 <h3>please enter a stock ticker to lookup (ex: goog = google, aapl = apple)</h3>
@@ -27,7 +26,7 @@
     <% if @stock %>
       <div class="well results-block">
         <td class="a"><strong>Symbol: </strong> <%= @stock.ticker %></td>
-        <td><strong>Name: </strong> <%= @stock.image %></td>
+        <td><strong>Name: </strong> <%= @stock.name %></td>
         <td><strong>Price: </strong> <%= @stock.last_price %></td>
       </div>
     <% end %>
